@@ -136,6 +136,7 @@ package, for use in a LaTeX context; and - starfn.
 %doc %{_texmfdistdir}/doc/latex/shipunov/sltables-doc-en.tex
 %doc %{_texmfdistdir}/doc/latex/shipunov/starfn-ex-ru.pdf
 %doc %{_texmfdistdir}/doc/latex/shipunov/starfn-ex-ru.tex
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -145,4 +146,6 @@ package, for use in a LaTeX context; and - starfn.
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar bibtex tex scripts doc %{buildroot}%{_texmfdistdir}
+cp -fpar bibtex scripts tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
