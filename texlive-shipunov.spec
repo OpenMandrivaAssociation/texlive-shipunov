@@ -17,8 +17,6 @@ BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
 Requires(post):	texlive-kpathsea
-Conflicts:	texlive-texmf <= 20110705-3
-Conflicts:	texlive-doc <= 20110705-3
 
 %description
 The bundle collects packages and classes, along with one
@@ -39,20 +37,12 @@ flower, for typesetting lists of flower formulae; - isyntax; -
 numerus; - punct; - sltables, which develops on the stables
 package, for use in a LaTeX context; and - starfn.
 
-%pre
-    %_texmf_mktexlsr_pre
-
 %post
-    %_texmf_mktexlsr_post
-
-%preun
-    if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_pre
-    fi
+    %{_sbindir}/texlive.post
 
 %postun
     if [ $1 -eq 0 ]; then
-	%_texmf_mktexlsr_post
+	%{_sbindir}/texlive.post
     fi
 
 #-----------------------------------------------------------------------
@@ -137,7 +127,6 @@ package, for use in a LaTeX context; and - starfn.
 %doc %{_texmfdistdir}/doc/latex/shipunov/sltables-doc-en.tex
 %doc %{_texmfdistdir}/doc/latex/shipunov/starfn-ex-ru.pdf
 %doc %{_texmfdistdir}/doc/latex/shipunov/starfn-ex-ru.tex
-%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -148,5 +137,3 @@ package, for use in a LaTeX context; and - starfn.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex scripts tex doc %{buildroot}%{_texmfdistdir}
-mkdir -p %{buildroot}%{_tlpkgobjdir}
-cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
