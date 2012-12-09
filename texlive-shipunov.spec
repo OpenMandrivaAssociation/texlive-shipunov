@@ -137,3 +137,17 @@ package, for use in a LaTeX context; and - starfn.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex scripts tex doc %{buildroot}%{_texmfdistdir}
+
+
+%changelog
+* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.1-2
++ Revision: 755981
+- Rebuild to reduce used resources
+
+* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.1-1
++ Revision: 719524
+- texlive-shipunov
+- texlive-shipunov
+- texlive-shipunov
+- texlive-shipunov
+
