@@ -1,12 +1,12 @@
-# revision 24203
+# revision 29349
 # category Package
 # catalog-ctan /macros/latex/contrib/shipunov
-# catalog-date 2010-10-26 16:14:45 +0200
+# catalog-date 2012-06-08 00:21:14 +0200
 # catalog-license lppl
 # catalog-version 1.1
 Name:		texlive-shipunov
 Version:	1.1
-Release:	2
+Release:	3
 Summary:	A collection of LaTeX packages and classes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/shipunov
@@ -137,17 +137,3 @@ package, for use in a LaTeX context; and - starfn.
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar bibtex scripts tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.1-2
-+ Revision: 755981
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.1-1
-+ Revision: 719524
-- texlive-shipunov
-- texlive-shipunov
-- texlive-shipunov
-- texlive-shipunov
-
