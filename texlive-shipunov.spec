@@ -6,7 +6,7 @@
 # catalog-version 1.1
 Name:		texlive-shipunov
 Version:	1.1
-Release:	5
+Release:	6
 Summary:	A collection of LaTeX packages and classes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/shipunov
