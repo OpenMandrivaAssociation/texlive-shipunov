@@ -1,18 +1,12 @@
-# revision 29349
-# category Package
-# catalog-ctan /macros/latex/contrib/shipunov
-# catalog-date 2012-06-08 00:21:14 +0200
-# catalog-license lppl
-# catalog-version 1.1
 Name:		texlive-shipunov
-Version:	1.1
-Release:	13
+Version:	52334
+Release:	1
 Summary:	A collection of LaTeX packages and classes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/shipunov
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/shipunov.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/shipunov.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/shipunov.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/shipunov.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -38,102 +32,25 @@ numerus; - punct; - sltables, which develops on the stables
 package, for use in a LaTeX context; and - starfn.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
-%{_texmfdistdir}/bibtex/bst/shipunov/rusnat.bst
-%{_texmfdistdir}/scripts/shipunov/biokey2html.bat
-%{_texmfdistdir}/scripts/shipunov/biokey2html.sh
-%{_texmfdistdir}/scripts/shipunov/biokey2html1.pl
-%{_texmfdistdir}/scripts/shipunov/biokey2html2.pl
-%{_texmfdistdir}/scripts/shipunov/biokey2html3.pl
-%{_texmfdistdir}/tex/latex/shipunov/altverse.sty
-%{_texmfdistdir}/tex/latex/shipunov/autolist.sty
-%{_texmfdistdir}/tex/latex/shipunov/biokey.sty
-%{_texmfdistdir}/tex/latex/shipunov/biolist.sty
-%{_texmfdistdir}/tex/latex/shipunov/boldline.sty
-%{_texmfdistdir}/tex/latex/shipunov/cassete.cls
-%{_texmfdistdir}/tex/latex/shipunov/classif2.sty
-%{_texmfdistdir}/tex/latex/shipunov/drcaps.sty
-%{_texmfdistdir}/tex/latex/shipunov/etiketka.cls
-%{_texmfdistdir}/tex/latex/shipunov/flower.sty
-%{_texmfdistdir}/tex/latex/shipunov/isyntax.sty
-%{_texmfdistdir}/tex/latex/shipunov/numerus.sty
-%{_texmfdistdir}/tex/latex/shipunov/punct.sty
-%{_texmfdistdir}/tex/latex/shipunov/sltables.sty
-%{_texmfdistdir}/tex/latex/shipunov/starfn.sty
-%doc %{_texmfdistdir}/doc/latex/shipunov/NEWS
-%doc %{_texmfdistdir}/doc/latex/shipunov/README
-%doc %{_texmfdistdir}/doc/latex/shipunov/altverse-ex-en.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/altverse-ex-en.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/altverse-ex1-ru.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/altverse-ex1-ru.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/altverse-ex2-ru.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/altverse-ex2-ru.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/autolist-ex-en.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/autolist-ex-en.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/autolist-ex-ru.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/autolist-ex-ru.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/biokey-doc-en.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/biokey-doc-en.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/biokey2html-doc-en.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/biokey2html-doc-en.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/biokey2html-ex-en.html
-%doc %{_texmfdistdir}/doc/latex/shipunov/biokey2html-ex-en1.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/biokey2html-ex-en2.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/biolist-ex-en.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/biolist-ex-en.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/boldline-ex-en.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/boldline-ex-en.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/cassete-ex-ru.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/cassete-ex-ru.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/classif2-ex-en.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/classif2-ex-en.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/drcaps-ex-en.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/drcaps-ex-en.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/etiketka-ex-ru.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/etiketka-ex-ru.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/etiketka-ex1-en.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/etiketka-ex1-en.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/etiketka-ex2-en.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/etiketka-ex2-en.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/field-form-ex1-ru.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/field-form-ex1-ru.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/field-form-ex2-ru.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/field-form-ex2-ru.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/flower-ex-en-x.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/flower-ex-en-x.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/flower-ex-en.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/flower-ex-en.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/isyntax-ex-en.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/numerus-ex-ru.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/numerus-ex-ru.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/punct-ex-en.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/punct-ex-en.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/rusnat-doc-ru.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/rusnat-doc-ru.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/rusnat-ex-ru.bib
-%doc %{_texmfdistdir}/doc/latex/shipunov/rusnat-ex1-ru.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/rusnat-ex1-ru.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/rusnat-ex2-ru.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/rusnat-ex2-ru.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/sltables-doc-en.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/sltables-doc-en.tex
-%doc %{_texmfdistdir}/doc/latex/shipunov/starfn-ex-ru.pdf
-%doc %{_texmfdistdir}/doc/latex/shipunov/starfn-ex-ru.tex
+%{_texmfdistdir}/bibtex/bst/shipunov
+%{_texmfdistdir}/tex/latex/shipunov
+%doc %{_texmfdistdir}/doc/latex/shipunov
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
-cp -fpar bibtex scripts tex doc %{buildroot}%{_texmfdistdir}
+cp -fpar bibtex tex doc %{buildroot}%{_texmfdistdir}
