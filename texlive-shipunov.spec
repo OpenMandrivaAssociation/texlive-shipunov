@@ -1,6 +1,6 @@
 Name:		texlive-shipunov
 Version:	52334
-Release:	1
+Release:	2
 Summary:	A collection of LaTeX packages and classes
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/shipunov
