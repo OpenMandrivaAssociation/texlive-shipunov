@@ -3,7 +3,7 @@ Version:	52334
 Release:	2
 Summary:	A collection of LaTeX packages and classes
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/shipunov
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/shipunov
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/shipunov.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/shipunov.doc.r%{version}.tar.xz
